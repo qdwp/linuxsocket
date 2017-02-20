@@ -1,0 +1,17 @@
+
+
+
+
+{"type": "0","from": "user1","pwd": "pwd1"}
+{"type": "0","from": "user2","pwd": "pwd2","to": ["user1"], "msg": "MSG_INFO_2_to_1"}
+{"type": "0","from": "user3","pwd": "pwd3","to": ["user1"], "msg": "MSG_INFO_3_to_1"}
+
+{"type": "1","from": "user1","pwd": "pwd1","to": ["user2"], "msg": "MSG_INFO_1_to_2"}
+{"type": "1","from": "user2","pwd": "pwd2","to": ["user1"], "msg": "MSG_INFO_2_to_1"}
+
+{"type": "1","from": "user2","pwd": "pwd2","to": ["user3"], "msg": "MSG_INFO_2_to_3"}
+{"type": "1","from": "user3","pwd": "pwd3","to": ["user1"], "msg": "MSG_INFO_3_to_1"}
+{"type": "1","from": "user3","pwd": "pwd3","to": ["user1","user2"], "msg": "MSG_INFO_3_to_1_2"}
+
+
+gcc server.c cJSON.c util.c -o ss
